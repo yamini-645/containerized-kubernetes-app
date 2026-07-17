@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: containerized-kubernetes-service
+
+spec:
+  selector:
+    app: containerized-kubernetes-app
+
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 5000
+
+  type: NodePort

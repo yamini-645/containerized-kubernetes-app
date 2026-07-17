@@ -15,7 +15,7 @@ def home():
 
     <p><b>Environment:</b> {os.getenv("ENVIRONMENT","Development")}</p>
 
-    <p><b>Version:</b> 1.0</p>
+    <p><b>Version:</b> 2.0</p>
     """
 
 @app.route("/health")

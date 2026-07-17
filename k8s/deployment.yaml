@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: containerized-kubernetes-app
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: containerized-kubernetes-app
+
+  template:
+    metadata:
+      labels:
+        app: containerized-kubernetes-app
+
+    spec:
+      containers:
+      - name: containerized-kubernetes-app
+        image: yamini786/containerized-kubernetes-app:v2
+
+        ports:
+        - containerPort: 5000
+
+        env:
+        - name: ENVIRONMENT
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: ENVIRONMENT
+
+        - name: VERSION
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: VERSION
+        - name: DB_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: app-secret
+              key: DB_USERNAME
+
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: app-secret
+              key: DB_PASSWORD
