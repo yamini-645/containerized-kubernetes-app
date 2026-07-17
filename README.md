@@ -115,17 +115,6 @@ containerized-kubernetes-app/
 
 ---
 
-## 📸 Screenshots
-
-Add screenshots of:
-
-- Jenkins Dashboard
-- Successful Pipeline
-- Docker Hub Repository
-- Kubernetes Pods
-- Running Application
-
----
 
 ## 📈 Key Learning Outcomes
 
