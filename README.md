@@ -16,6 +16,14 @@ The pipeline automatically builds a Docker image, pushes it to Docker Hub, and d
 
 ## 🏗️ Architecture
 
+The following diagram illustrates the complete CI/CD workflow of this project.
+
+<p align="center">
+  <img src="architecture.png" alt="CI/CD Pipeline Architecture" width="1000">
+</p>
+
+### 📌 Pipeline Flow (Reference)
+
 ```
 Developer
     │
